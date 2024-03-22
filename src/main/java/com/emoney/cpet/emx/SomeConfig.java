@@ -81,18 +81,12 @@ public class SomeConfig extends Config{
 		return super.getState();
 	}
 
-
-	@Override
-	public void setState(Map<String, Object> mapParam) {
-		// TODO Auto-generated method stub
-		super.setState(mapParam);
-	}
-
-
 	@Override
 	public void checkState(Map<String, Object> mapParam) {
 		// TODO Auto-generated method stub
 		super.checkState(mapParam);
+		System.out.println("===WWW Logic for this componnet was executed: " + this.getClass().getName());
+		System.out.println("===WWW Component special code is executing"+ this.getClass().getName());
 	}
 
 

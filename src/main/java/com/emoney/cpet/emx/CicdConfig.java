@@ -47,4 +47,25 @@ public class CicdConfig extends Config{
 		this.systemConfig = systemConfig;
 	}
 
+	@Override
+	public void log(String message, Map<String, Object> mapParam) {
+		// TODO Auto-generated method stub
+		super.log(message, mapParam);
+	}
+
+
+	@Override
+	public Map<String, Object> getState() {
+		// TODO Auto-generated method stub
+		return super.getState();
+	}
+
+	@Override
+	public void checkState(Map<String, Object> mapParam) {
+		// TODO Auto-generated method stub
+		super.checkState(mapParam);
+		System.out.println("===WWW Logic for this componnet was executed: " + this.getClass().getName());
+		System.out.println("===WWW Component special code is executing"+ this.getClass().getName());
+	}
+
 }

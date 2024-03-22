@@ -43,21 +43,11 @@ public class SystemConfig extends Config{
 	}
 
 	@Override
-	public void setState(Map<String, Object> mapParam) {
-		
-		super.setState(mapParam);
-		//setField1((String)mapParam.get("field1"));
-		//setField2((String)mapParam.get("field2"));
-		//setField3((String)mapParam.get("field3"));
-		
-	}
-
-	@Override
 	public void checkState(Map<String, Object> mapParam) {
 		// TODO Auto-generated method stub
 		super.checkState(mapParam);
+		System.out.println("===> Logic for this component was executed "+ this.getClass().getName());
 	}
-
 	@Override
 	public void log(String message, Map<String, Object> mapParam) {
 		// TODO Auto-generated method stub

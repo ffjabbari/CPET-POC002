@@ -43,6 +43,7 @@ public class ObjectFactory<T>  implements Factory<T>{
 				//Map<String, Object> mapParamx = (Map<String, Object>)methodGetState.invoke(obj, null);
 				
 				obj.setState(mapParam);
+				obj.checkState(mapParam);
 				
 				//methodCheckState = classx.getDeclaredMethod("checkState", Map.class);
 				//methodCheckState.invoke(obj, mapParam);

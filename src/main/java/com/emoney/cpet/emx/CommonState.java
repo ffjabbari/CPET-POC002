@@ -45,7 +45,7 @@ public abstract class CommonState implements State{
 			BeanInfo bi = Introspector.getBeanInfo(javaBean.getClass());
 			PropertyDescriptor pds[] = bi.getPropertyDescriptors();
 			for (PropertyDescriptor pd : pds) {
-				System.out.println("pds.getName(): " + pd.getName());
+				//FREDD System.out.println("pds.getName(): " + pd.getName());
 				if ((this.getClass().getName() + "." + pd.getName()).equals(propertyName)) {
 					Method setter = pd.getWriteMethod();
 					if (setter != null) {
@@ -70,10 +70,10 @@ public abstract class CommonState implements State{
 			
 			for (PropertyDescriptor pd : pds) {
 				boolean bypass = false;
-				System.out.println("pds.getName(): " + pd.getName());	
-				System.out.println("getClass(): " + pd.getClass());
-				System.out.println("getPropetyType(): " + pd.getPropertyType());
-				System.out.println("getPropetyEditorClass(): " + pd.getPropertyEditorClass());
+				//FREDD System.out.println("pds.getName(): " + pd.getName());	
+				//FREDDDD System.out.println("getClass(): " + pd.getClass());
+				//FREDDDD System.out.println("getPropetyType(): " + pd.getPropertyType());
+				//FREDDDD System.out.println("getPropetyEditorClass(): " + pd.getPropertyEditorClass());
 				if  (pd.getName().equalsIgnoreCase("class") || pd.getName().equalsIgnoreCase("state") ){
 					bypass = true;
 				}
@@ -124,13 +124,13 @@ public abstract class CommonState implements State{
 			BeanInfo bi = Introspector.getBeanInfo(javaBean.getClass());
 			PropertyDescriptor pds[] = bi.getPropertyDescriptors();
 			for (PropertyDescriptor pd : pds) {
-				System.out.println("pds.getName(): " + pd.getName());					
+				//FREDD System.out.println("pds.getName(): " + pd.getName());					
 				Method setter = pd.getWriteMethod();
 				if (setter != null) {
 					@SuppressWarnings("rawtypes")
 					Class pt = pd.getPropertyType();
 					//boolean isState = Arrays.asList(aryInterface).contains(State.class);
-					System.out.println("supercalss is: " + pt.getSuperclass());
+					//FREDDD System.out.println("supercalss is: " + pt.getSuperclass());
 					if  (CommonState.class.isAssignableFrom(pt)){
 						Method getter = pd.getReadMethod();
 						Object objx = getter.invoke(javaBean,  new Object[]{});
@@ -140,7 +140,7 @@ public abstract class CommonState implements State{
 								mapParamx = (Map<String, Object>)objx;
 							}else{
 								//SHOULDN'T WE ISSUE THE SEtter HERE??? I AM CONFUSED!!!.  
-								//FRED I think you are wrong.  We do not need to do the setter here.
+								//DERF I think you are wrong.  We do not need to do the setter here.
 								//It is already taken care of...
 							}
 						}else{
